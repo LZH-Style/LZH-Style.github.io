@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2021/08/11/dierge/"/>
-      <url>/2021/08/11/dierge/</url>
-      
-        <content type="html"><![CDATA[<p>title: Mac提高使用效率的一些方法   #文章的标题，这个才是显示的文章标题，其实文件名不影响<br>    date: 2015-09-01 20:33:26      #用命令会自动生成，也可以自己写，所以文章时间可以改<br>    categories: technology         #文章的分类，这个可以自己定义<br>    tags: [Mac,效率,快捷方式]        #tag，为文章添加标签，方便搜索</p><h1 id="第二个"><a href="#第二个" class="headerlink" title="第二个"></a>第二个</h1><p>测试</p><h2 id="啊啊"><a href="#啊啊" class="headerlink" title="啊啊"></a>啊啊</h2>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hello World</title>
       <link href="/2021/08/10/hello-world/"/>
       <url>/2021/08/10/hello-world/</url>
@@ -30,27 +17,27 @@
     
     
     <entry>
-      <title>Mac提高使用效率的一些方法</title>
+      <title></title>
       <link href="/2015/09/01/test/"/>
       <url>/2015/09/01/test/</url>
       
-        <content type="html"><![CDATA[<h1 id="第二个"><a href="#第二个" class="headerlink" title="第二个"></a>第二个</h1><p>测试</p><h2 id="啊啊"><a href="#啊啊" class="headerlink" title="啊啊"></a>啊啊</h2>]]></content>
+        <content type="html"><![CDATA[<h1 id="第二个"><a href="#第二个" class="headerlink" title="第二个"></a>第二个</h1><p>测试</p><h2 id="内容："><a href="#内容：" class="headerlink" title="内容："></a>内容：</h2>]]></content>
       
       
       <categories>
           
-          <category> technology </category>
+          <category> study </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Mac </tag>
+            <tag> 标签1 </tag>
             
-            <tag> 效率 </tag>
+            <tag> 标签2 </tag>
             
-            <tag> 快捷方式 </tag>
+            <tag> 标签3 </tag>
             
         </tags>
       
