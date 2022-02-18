@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, StyleWave">
+    <meta name="keywords" content="算法总结(蓝桥杯), StyleWave">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | StyleWave</title>
+    <title>算法总结(蓝桥杯) | StyleWave</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -318,7 +318,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">算法总结(蓝桥杯)</h1>
                 </div>
             </div>
         </div>
@@ -432,12 +432,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">
+                                <span class="chip bg-color">蓝桥杯</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E3%80%81%E7%AE%97%E6%B3%95/" class="post-category">
+                                学习、算法
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -446,7 +463,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-08-10
+                    2022-02-18
                 </div>
                 
 
@@ -455,7 +472,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    73
+                    662
                 </div>
                 
 
@@ -472,20 +489,95 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
+                <h1 id="蓝桥杯乱杀"><a href="#蓝桥杯乱杀" class="headerlink" title="蓝桥杯乱杀"></a>蓝桥杯乱杀</h1><h3 id="一、-dp算法-（动态规划）"><a href="#一、-dp算法-（动态规划）" class="headerlink" title="一、 dp算法 （动态规划）"></a>一、 dp算法 （动态规划）</h3><p>最重要的是找到<strong>状态转换方程</strong> 一般根据最后一步想前面的步骤 </p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> d[<span class="number">25</span>][<span class="number">25</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">int</span> f[<span class="number">25</span>][<span class="number">25</span>],a,b,c,e;</span><br><span class="line">	cin&gt;&gt;a&gt;&gt;b&gt;&gt;c&gt;&gt;e;</span><br><span class="line">	d[c][e]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(c<span class="number">-1</span>&gt;=<span class="number">0</span>)</span><br><span class="line">	{</span><br><span class="line">		d[c<span class="number">-1</span>][e+<span class="number">2</span>]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(e<span class="number">-2</span>&gt;=<span class="number">0</span>)</span><br><span class="line">		d[c<span class="number">-1</span>][e<span class="number">-2</span>]=<span class="number">1</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">if</span>(c<span class="number">-2</span>&gt;=<span class="number">0</span>)</span><br><span class="line">	{</span><br><span class="line">		d[c<span class="number">-2</span>][e+<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(e<span class="number">-1</span>&gt;=<span class="number">0</span>)</span><br><span class="line">		d[c<span class="number">-2</span>][e<span class="number">-1</span>]=<span class="number">1</span>;</span><br><span class="line">	} </span><br><span class="line">	<span class="keyword">if</span>(e<span class="number">-2</span>&gt;=<span class="number">0</span>) </span><br><span class="line">	d[c+<span class="number">1</span>][e<span class="number">-2</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(e<span class="number">-1</span>&gt;=<span class="number">0</span>) </span><br><span class="line">	d[c+<span class="number">2</span>][e<span class="number">-1</span>]=<span class="number">1</span>;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	d[c+<span class="number">1</span>][e+<span class="number">2</span>]=<span class="number">1</span>;</span><br><span class="line">	d[c+<span class="number">2</span>][e+<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=a;i++)</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=b;j++) </span><br><span class="line">		{</span><br><span class="line">			<span class="keyword">if</span>(d[i][j]==<span class="number">1</span>)</span><br><span class="line">				f[i][j]=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			{</span><br><span class="line">					</span><br><span class="line">			<span class="keyword">if</span> (i==<span class="number">0</span>&amp;&amp;j==<span class="number">0</span>)</span><br><span class="line">				f[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (i==<span class="number">0</span>&amp;&amp;j!=<span class="number">0</span>)</span><br><span class="line">				f[<span class="number">0</span>][j]=f[<span class="number">0</span>][j<span class="number">-1</span>];</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(j==<span class="number">0</span>&amp;&amp;i!=<span class="number">0</span>)</span><br><span class="line">				f[i][<span class="number">0</span>]=f[i<span class="number">-1</span>][<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				f[i][j]=f[i<span class="number">-1</span>][j]+f[i][j<span class="number">-1</span>];</span><br><span class="line">			}		</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line"> 	cout&lt;&lt;f[a][b];</span><br><span class="line"> 	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">} </span><br></pre></td></tr></tbody></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="二、vector动态容器"><a href="#二、vector动态容器" class="headerlink" title="二、vector动态容器"></a>二、vector动态容器</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;int&gt; v;</span><br><span class="line">vector.push_back(1);</span><br><span class="line">vector.push_back(2);</span><br><span class="line">vector.pop_back(1);</span><br><span class="line">vector.clear();</span><br><span class="line"></span><br><span class="line">vector&lt;int&gt; mat[10005]; //10005个数 每个数是vector类型</span><br></pre></td></tr></tbody></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
+<p>锯齿形矩阵</p>
+<h3 id="三、set集合"><a href="#三、set集合" class="headerlink" title="三、set集合"></a>三、set集合</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th></th>
+<th>复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>insert</td>
+<td>插入一个</td>
+<td>O(logn)</td>
+</tr>
+<tr>
+<td>erase</td>
+<td>删除一个</td>
+<td>O(logn)</td>
+</tr>
+<tr>
+<td>count</td>
+<td>统计个数 (set不能重复所以返回1)</td>
+<td>O(logn)</td>
+</tr>
+<tr>
+<td>size</td>
+<td>长度</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>clear</td>
+<td>清除内容包括空间</td>
+<td>O(n)</td>
+</tr>
+</tbody></table>
+<p>==<strong>最主要的是set能够去重</strong>==</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for(set&lt;int&gt;::iterator it=x.begin(); it!=x.end(); it++)</span><br><span class="line">	cout&lt;&lt;*it&lt;&lt;endl;</span><br></pre></td></tr></tbody></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
+<h3 id="四、map映射"><a href="#四、map映射" class="headerlink" title="四、map映射"></a>四、map映射</h3><p>map中按照key值排序</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">map&lt;string,int&gt; dict;</span><br><span class="line">dict.insert(make_pair("Tom",1));   //不能改变原先已存在的key-value</span><br><span class="line">dict.insert(make_pair("Lisi",1));</span><br><span class="line">dict["Tom"]=2;        //可以改变原先已存在的key-value</span><br><span class="line">a=dict.count("Tom");    //a=1; 判断是否存在</span><br><span class="line"></span><br><span class="line">for(map&lt;string,int&gt;::iterator it=dict.begin(); it!=dict.end(); it++){   //迭代器遍历</span><br><span class="line">	cout&lt;&lt;it-&gt;first&lt;&lt;" "&lt;&lt;it.second&lt;&lt;endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">dict.clear();</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h3 id="五-、stack栈"><a href="#五-、stack栈" class="headerlink" title="五 、stack栈"></a>五 、stack栈</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>push()</td>
+<td>入栈，从栈顶放入一个元素在里面</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>出栈，从栈顶拿出一个元素</td>
+</tr>
+<tr>
+<td>top()</td>
+<td>获取栈顶元素</td>
+</tr>
+<tr>
+<td>empty()</td>
+<td>判断是否为空 为空返回1</td>
+</tr>
+<tr>
+<td>size()</td>
+<td>计算元素个数</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="二-、-一些需要注意的地方"><a href="#二-、-一些需要注意的地方" class="headerlink" title="二 、 一些需要注意的地方"></a>二 、 一些需要注意的地方</h2><ul>
+<li>当你需要用2的n次方时，不建议使用pow(2,n)，建议使用(1LL&lt;&lt;n) 表示左移n位，因为前者数字过大之后会不准确</li>
+<li>printf(%lld,n) 或者printf(%I64d,n) 注意 前面的l是小写的L,l  后面一定要用i的大写I 表示输出的为long long</li>
+<li>用scanf时一定要注意后面的取地址符 &amp;，使用if时()中一定是==注意细节</li>
+<li></li>
+</ul>
+<h3 id="六、深度优先搜索（dfs）"><a href="#六、深度优先搜索（dfs）" class="headerlink" title="六、深度优先搜索（dfs）"></a>六、深度优先搜索（dfs）</h3>
                 
             </div>
             <hr/>
@@ -511,7 +603,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/08/10/hello-world/">http://example.com/2021/08/10/hello-world/</a>
+                    <a href="http://example.com/2022/02/18/lan-qiao-bei-suan-fa/">http://example.com/2022/02/18/lan-qiao-bei-suan-fa/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -548,7 +640,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">
+                                    <span class="chip bg-color">蓝桥杯</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -718,9 +818,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2022/02/18/lan-qiao-bei-suan-fa/">
                     <div class="card-image">
@@ -738,9 +839,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -753,6 +854,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -775,13 +877,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2015/09/01/test/">
+                <a href="/2021/08/10/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -792,35 +894,15 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2015-09-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-10
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/study/" class="post-category">
-                                    study
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            StyleWave
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%A0%87%E7%AD%BE1/">
-                        <span class="chip bg-color">标签1</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%A0%87%E7%AD%BE2/">
-                        <span class="chip bg-color">标签2</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%A0%87%E7%AD%BE3/">
-                        <span class="chip bg-color">标签3</span>
-                    </a>
-                    
                 </div>
                 
             </div>
