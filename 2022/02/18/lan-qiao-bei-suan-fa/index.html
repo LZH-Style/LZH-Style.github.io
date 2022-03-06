@@ -478,7 +478,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    667
+                    1.3k
                 </div>
                 
 
@@ -594,7 +594,7 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
 <td>O(n)</td>
 </tr>
 </tbody></table>
-<p>==<strong>最主要的是set能够去重</strong>==</p>
+<p>==<strong>最主要的是set能够去重而且能够从小到大排序</strong>==</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span>set<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>iterator it<span class="token operator">=</span>x<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> it<span class="token operator">!=</span>x<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> it<span class="token operator">++</span><span class="token punctuation">)</span>
 	cout<span class="token operator">&lt;&lt;</span><span class="token operator">*</span>it<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
@@ -647,13 +647,62 @@ dict<span class="token punctuation">.</span><span class="token function">clear</
 <td></td>
 </tr>
 </tbody></table>
-<h2 id="二-、-一些需要注意的地方"><a href="#二-、-一些需要注意的地方" class="headerlink" title="二 、 一些需要注意的地方"></a>二 、 一些需要注意的地方</h2><ul>
+<h3 id="六、深度优先搜索（dfs）"><a href="#六、深度优先搜索（dfs）" class="headerlink" title="六、深度优先搜索（dfs）"></a>六、深度优先搜索（dfs）</h3><p>未完待续</p>
+<h3 id="七、广度优先搜索（bfs）"><a href="#七、广度优先搜索（bfs）" class="headerlink" title="七、广度优先搜索（bfs）"></a>七、广度优先搜索（bfs）</h3><h2 id="二-、-一些需要注意的地方"><a href="#二-、-一些需要注意的地方" class="headerlink" title="二 、 一些需要注意的地方"></a>二 、 一些需要注意的地方</h2><ul>
 <li>当你需要用2的n次方时，不建议使用pow(2,n)，建议使用(1LL&lt;&lt;n) 表示左移n位，因为前者数字过大之后会不准确</li>
-<li>printf(%lld,n) 或者printf(%I64d,n) 注意 前面的l是小写的L,l  后面一定要用i的大写I 表示输出的为long long</li>
+<li>scanf(“%lf”,)和printf(“%llf”,n) 或者printf(“%I64d”,n) 注意 前面的l是小写的L,l  后面一定要用i的大写I 表示输出的为long long</li>
 <li>用scanf时一定要注意后面的取地址符 &amp;，使用if时()中一定是==注意细节</li>
+<li>cout&lt;&lt;std::fixed&lt;&lt;a&lt;&lt;endl; 表示输出的a不用科学计数法 这样来输出一些很大或者是double小数位很多</li>
 <li></li>
 </ul>
-<h3 id="六、深度优先搜索（dfs）"><a href="#六、深度优先搜索（dfs）" class="headerlink" title="六、深度优先搜索（dfs）"></a>六、深度优先搜索（dfs）</h3><p>未完待续</p>
+<h2 id="三、一些很有用的知识"><a href="#三、一些很有用的知识" class="headerlink" title="三、一些很有用的知识"></a>三、一些很有用的知识</h2><h4 id="一、string与int的相互转换"><a href="#一、string与int的相互转换" class="headerlink" title="一、string与int的相互转换"></a>一、string与int的相互转换</h4><h5 id="1-string转int"><a href="#1-string转int" class="headerlink" title="1.string转int"></a>1.string转int</h5><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> a<span class="token punctuation">;</span>                     
+string str<span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">atoi</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">c_str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+cout<span class="token operator">&lt;&lt;</span><span class="token keyword">typeid</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span> <span class="token comment">//输出结果为i 表示int</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>利用atoi()函数可直接将字符串类型转换成int类型 ，该函数定义在stdlib.h头文件中，若输入的不是数字字符，那么返回值为0.</p>
+<p>值得注意的是如果为数字加其它的混合则取前面的数字 eg：str=”20LZH45” 最后 a=20</p>
+</blockquote>
+<h5 id="2-int转string"><a href="#2-int转string" class="headerlink" title="2.int转string"></a>2.int转string</h5><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">tostring</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">,</span>string <span class="token operator">&amp;</span>s<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	stringstream ss<span class="token punctuation">;</span>
+	ss<span class="token operator">&lt;&lt;</span>i<span class="token punctuation">;</span>
+	ss<span class="token operator">&gt;&gt;</span>s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> a<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+string _a<span class="token punctuation">;</span>
+<span class="token function">tostring</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>_a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+cout<span class="token operator">&lt;&lt;</span><span class="token keyword">typeid</span><span class="token punctuation">(</span>_a<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>  <span class="token comment">//输出结果为A3_c 表示一个长度为2的字符串</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>利用stringstream字符串流去实现转换，它将流与存储在内存中的string对象绑定起来。不仅是int，  double，long long 等都可以根据此函数去改写即可</p>
+</blockquote>
+<h4 id="二、关于sort-函数"><a href="#二、关于sort-函数" class="headerlink" title="二、关于sort()函数"></a>二、关于sort()函数</h4><h5 id="1-从小到大"><a href="#1-从小到大" class="headerlink" title="1.从小到大"></a>1.从小到大</h5><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">sort</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>a<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//或者是 sort(&amp;a[0],&amp;a[5])；</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    cout<span class="token operator">&lt;&lt;</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span><span class="token string">" "</span><span class="token punctuation">;</span>     <span class="token comment">//输出结果为 1 2 3 4 5</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>sort(a,b)  sort函数中a值为需要排序的第一个数的地址,而b值为最后一个数的地址的下一位 在上述代码中为 a+5或者是&amp;a[5]。</p>
+</blockquote>
+<h5 id="2-从大到小"><a href="#2-从大到小" class="headerlink" title="2.从大到小"></a>2.从大到小</h5><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">bool</span> <span class="token function">complare</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span><span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">return</span> a<span class="token operator">&gt;</span>b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">sort</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>a<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">,</span>complare<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//或者是 sort(&amp;a[0],&amp;a[5])；</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    cout<span class="token operator">&lt;&lt;</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span><span class="token string">" "</span><span class="token punctuation">;</span>     <span class="token comment">//输出结果为5 4 3 2 1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>规则如上从小到大相同，只是在sort()里内第三位需要添加bool类型的函数，如上代码即可。</p>
+<p>这里既然提到添加bool函数 其实自己也能进行改写从而灵活运用  eg:比较两个结构体stu学生的年龄age如下</p>
+</blockquote>
+<p><code>bool comlare(stu a,stu b)    {return a.age&gt;b.age;  //从大到小为&gt;,从小到大为&lt;} </code></p>
+<h2 id="四、一些建议"><a href="#四、一些建议" class="headerlink" title="四、一些建议"></a>四、一些建议</h2><ul>
+<li>做题时一定要仔细，多出几个测评结果，最好能有边界等特殊的例子来测评可以进一步来检验自己的结果</li>
+</ul>
 
                 
             </div>
@@ -914,7 +963,7 @@ dict<span class="token punctuation">.</span><span class="token function">clear</
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            利用PicGo去部署到github直接可以在任何地方引用图片连接，jsdelver加速十分方便
+                            利用PicGo去部署到github直接可以在任何地方引用图片连接，jsdelivr加速十分方便
                         
                     </div>
                     <div class="publish-info">
