@@ -4,33 +4,6 @@
   
     
     <entry>
-      <title>树相关知识总结</title>
-      <link href="/2022/05/14/shu/"/>
-      <url>/2022/05/14/shu/</url>
-      
-        <content type="html"><![CDATA[<h2 id="一、树的基本概念"><a href="#一、树的基本概念" class="headerlink" title="一、树的基本概念"></a>一、树的基本概念</h2><h2 id="二、树的构建"><a href="#二、树的构建" class="headerlink" title="二、树的构建"></a>二、树的构建</h2><h2 id="三、树的四种遍历"><a href="#三、树的四种遍历" class="headerlink" title="三、树的四种遍历"></a>三、树的四种遍历</h2><h2 id="四、最小生成树"><a href="#四、最小生成树" class="headerlink" title="四、最小生成树"></a>四、最小生成树</h2><h2 id="五、二叉树"><a href="#五、二叉树" class="headerlink" title="五、二叉树"></a>五、二叉树</h2><h3 id="一、完全二叉树的遍历"><a href="#一、完全二叉树的遍历" class="headerlink" title="一、完全二叉树的遍历"></a>一、完全二叉树的遍历</h3>]]></content>
-      
-      
-      <categories>
-          
-          <category> 算法 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 算法 </tag>
-            
-            <tag> 学习，数据结构 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2022天梯赛个人体验</title>
       <link href="/2022/04/28/2022-tian-ti-sai/"/>
       <url>/2022/04/28/2022-tian-ti-sai/</url>
@@ -60,6 +33,35 @@
     
     
     <entry>
+      <title>树相关知识总结</title>
+      <link href="/2022/04/09/shu/"/>
+      <url>/2022/04/09/shu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、树的基本概念"><a href="#一、树的基本概念" class="headerlink" title="一、树的基本概念"></a>一、树的基本概念</h2><h2 id="二、树的构建"><a href="#二、树的构建" class="headerlink" title="二、树的构建"></a>二、树的构建</h2><h2 id="三、树的四种遍历"><a href="#三、树的四种遍历" class="headerlink" title="三、树的四种遍历"></a>三、树的四种遍历</h2><h2 id="四、最小生成树"><a href="#四、最小生成树" class="headerlink" title="四、最小生成树"></a>四、最小生成树</h2><h2 id="五、二叉树"><a href="#五、二叉树" class="headerlink" title="五、二叉树"></a>五、二叉树</h2><h3 id="一、完全二叉树的遍历"><a href="#一、完全二叉树的遍历" class="headerlink" title="一、完全二叉树的遍历"></a>一、完全二叉树的遍历</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>三种路径算法</title>
       <link href="/2022/04/03/san-chong-lu-jing-suan-fa/"/>
       <url>/2022/04/03/san-chong-lu-jing-suan-fa/</url>
@@ -78,36 +80,9 @@
             
             <tag> 学习 </tag>
             
-            <tag> 算法，数据结构 </tag>
+            <tag> 算法 </tag>
             
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>jsdelivr+PicGo+github打造图床(白嫖强推)</title>
-      <link href="/2022/02/23/picgo/"/>
-      <url>/2022/02/23/picgo/</url>
-      
-        <content type="html"><![CDATA[<h1 id="图床搭建"><a href="#图床搭建" class="headerlink" title="图床搭建"></a>图床搭建</h1><h3 id="1-下载PicGo"><a href="#1-下载PicGo" class="headerlink" title="1.下载PicGo"></a>1.下载PicGo</h3><p> 首先你需要下载一款上传图片的软件 这里我强推这款开源工具PicGo<a href="https://github.com/Molunerfinn/PicGo/releases">这里是地址</a>根据需要下载你需要的版本即可</p><p>下载完后</p><img src="https://cdn.jsdelivr.net/gh/LZH-Style/images/img/202202232225718.png" style="zoom:80%;"><p>PicGo是一个用于快速上传图片并获取图片URL链接的工具，目前支持微博图床、七牛图床、腾讯云、又拍云、GitHub、阿里云等图床 </p><p>这里我只介绍Github</p><h3 id="2-Github"><a href="#2-Github" class="headerlink" title="2.Github"></a>2.Github</h3><p>首先你需要在Github上单独建立一个public仓库，具体如下，可任意修改</p><p><img src="https://cdn.jsdelivr.net/gh/LZH-Style/images/img/202202232304104.png"></p><blockquote><p>接下来要获得你的token</p></blockquote><p>进入设置里面如下</p><img src="https://cdn.jsdelivr.net/gh/LZH-Style/images/img/202202232248658.png" style="zoom:80%;"><p><img src="https://cdn.jsdelivr.net/gh/LZH-Style/images/img/202202232255806.png"></p><p>然后取名字note 只需要勾选repo狂即可，就可生成令牌token 需要记住</p><h3 id="3-配置PicGo"><a href="#3-配置PicGo" class="headerlink" title="3.配置PicGo"></a>3.配置PicGo</h3><h5 id="1-github设置"><a href="#1-github设置" class="headerlink" title="1.github设置"></a>1.github设置</h5><p><img src="https://cdn.jsdelivr.net/gh/LZH-Style/images/img/202202232300806.png"></p><ol><li>仓库名是 github名称/刚才你设置的仓库名称</li><li>分支名填main</li><li>token粘贴你获取到的即可</li><li>示例：img/ 或者你想填的路径</li><li>这种形式 <a href="https://cdn.jsdelivr.net/gh/%E7%94%A8%E6%88%B7%E5%90%8D/github%E4%BB%93%E5%BA%93%E5%90%8D">https://cdn.jsdelivr.net/gh/用户名/github仓库名</a></li></ol><h5 id="2-PiGo设置"><a href="#2-PiGo设置" class="headerlink" title="2.PiGo设置"></a>2.PiGo设置</h5><p>建议如下</p><p><img src="https://cdn.jsdelivr.net/gh/LZH-Style/images/img/202202232308659.png"></p><h3 id="4-如何使用"><a href="#4-如何使用" class="headerlink" title="4.如何使用"></a>4.如何使用</h3><h5 id="1-上传图片"><a href="#1-上传图片" class="headerlink" title="1.上传图片"></a>1.上传图片</h5><p>根据页面提示上传即可</p><img src="https://cdn.jsdelivr.net/gh/LZH-Style/images/img/202202232225718.png" style="zoom:80%;"><h5 id="2-通过jsDelivr引用资源"><a href="#2-通过jsDelivr引用资源" class="headerlink" title="2.通过jsDelivr引用资源"></a>2.通过jsDelivr引用资源</h5><p>有不同连接可任意生成</p><p>如下url形式</p><blockquote><pre class="line-numbers language-text" data-language="text"><code class="language-text">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名/文件路径<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> 工具 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 工具 </tag>
-            
-            <tag> 白嫖 </tag>
-            
-            <tag> 图片 </tag>
+            <tag> 数据结构 </tag>
             
         </tags>
       
@@ -137,6 +112,35 @@
             <tag> 蓝桥杯 </tag>
             
             <tag> 竞赛 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>jsdelivr+PicGo+github打造图床(白嫖强推)</title>
+      <link href="/2021/10/23/picgo/"/>
+      <url>/2021/10/23/picgo/</url>
+      
+        <content type="html"><![CDATA[<h1 id="图床搭建"><a href="#图床搭建" class="headerlink" title="图床搭建"></a>图床搭建</h1><h3 id="1-下载PicGo"><a href="#1-下载PicGo" class="headerlink" title="1.下载PicGo"></a>1.下载PicGo</h3><p> 首先你需要下载一款上传图片的软件 这里我强推这款开源工具PicGo<a href="https://github.com/Molunerfinn/PicGo/releases">这里是地址</a>根据需要下载你需要的版本即可</p><p>下载完后</p><img src="https://cdn.jsdelivr.net/gh/LZH-Style/images/img/202202232225718.png" style="zoom:80%;"><p>PicGo是一个用于快速上传图片并获取图片URL链接的工具，目前支持微博图床、七牛图床、腾讯云、又拍云、GitHub、阿里云等图床 </p><p>这里我只介绍Github</p><h3 id="2-Github"><a href="#2-Github" class="headerlink" title="2.Github"></a>2.Github</h3><p>首先你需要在Github上单独建立一个public仓库，具体如下，可任意修改</p><p><img src="https://cdn.jsdelivr.net/gh/LZH-Style/images/img/202202232304104.png"></p><blockquote><p>接下来要获得你的token</p></blockquote><p>进入设置里面如下</p><img src="https://cdn.jsdelivr.net/gh/LZH-Style/images/img/202202232248658.png" style="zoom:80%;"><p><img src="https://cdn.jsdelivr.net/gh/LZH-Style/images/img/202202232255806.png"></p><p>然后取名字note 只需要勾选repo狂即可，就可生成令牌token 需要记住</p><h3 id="3-配置PicGo"><a href="#3-配置PicGo" class="headerlink" title="3.配置PicGo"></a>3.配置PicGo</h3><h5 id="1-github设置"><a href="#1-github设置" class="headerlink" title="1.github设置"></a>1.github设置</h5><p><img src="https://cdn.jsdelivr.net/gh/LZH-Style/images/img/202202232300806.png"></p><ol><li>仓库名是 github名称/刚才你设置的仓库名称</li><li>分支名填main</li><li>token粘贴你获取到的即可</li><li>示例：img/ 或者你想填的路径</li><li>这种形式 <a href="https://cdn.jsdelivr.net/gh/%E7%94%A8%E6%88%B7%E5%90%8D/github%E4%BB%93%E5%BA%93%E5%90%8D">https://cdn.jsdelivr.net/gh/用户名/github仓库名</a></li></ol><h5 id="2-PiGo设置"><a href="#2-PiGo设置" class="headerlink" title="2.PiGo设置"></a>2.PiGo设置</h5><p>建议如下</p><p><img src="https://cdn.jsdelivr.net/gh/LZH-Style/images/img/202202232308659.png"></p><h3 id="4-如何使用"><a href="#4-如何使用" class="headerlink" title="4.如何使用"></a>4.如何使用</h3><h5 id="1-上传图片"><a href="#1-上传图片" class="headerlink" title="1.上传图片"></a>1.上传图片</h5><p>根据页面提示上传即可</p><img src="https://cdn.jsdelivr.net/gh/LZH-Style/images/img/202202232225718.png" style="zoom:80%;"><h5 id="2-通过jsDelivr引用资源"><a href="#2-通过jsDelivr引用资源" class="headerlink" title="2.通过jsDelivr引用资源"></a>2.通过jsDelivr引用资源</h5><p>有不同连接可任意生成</p><p>如下url形式</p><blockquote><pre class="line-numbers language-text" data-language="text"><code class="language-text">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名/文件路径<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 白嫖 </tag>
+            
+            <tag> 图片 </tag>
             
         </tags>
       
@@ -188,11 +192,11 @@
       
         <tags>
             
+            <tag> 学习 </tag>
+            
             <tag> git </tag>
             
             <tag> 命令 </tag>
-            
-            <tag> 学习 </tag>
             
         </tags>
       
