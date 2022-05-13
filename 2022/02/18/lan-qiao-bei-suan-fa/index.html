@@ -478,7 +478,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    2.8k
                 </div>
                 
 
@@ -545,8 +545,8 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span>set<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>iterator it<span class="token operator">=</span>x<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> it<span class="token operator">!=</span>x<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> it<span class="token operator">++</span><span class="token punctuation">)</span>
 	cout<span class="token operator">&lt;&lt;</span><span class="token operator">*</span>it<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-
-
+<p>multiset<int> mu; </int></p>
+<p><font color="#56d9f2"><strong>最主要的是multiset不去重而且能够从小到大排序</strong></font></p>
 <h4 id="三、map映射"><a href="#三、map映射" class="headerlink" title="三、map映射"></a>三、map映射</h4><p>map中按照key值排序</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">map<span class="token operator">&lt;</span>string<span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;</span> dict<span class="token punctuation">;</span>
 dict<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token function">make_pair</span><span class="token punctuation">(</span><span class="token string">"Tom"</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">//不能改变原先已存在的key-value</span>
@@ -595,7 +595,54 @@ dict<span class="token punctuation">.</span><span class="token function">clear</
 </tr>
 </tbody></table>
 <h4 id="五、queue队列"><a href="#五、queue队列" class="headerlink" title="五、queue队列"></a>五、queue队列</h4><p>出队从第一个出，进队加在最后面</p>
-<h3 id="二、-dp算法-（动态规划）"><a href="#二、-dp算法-（动态规划）" class="headerlink" title="二、 dp算法 （动态规划）"></a>二、 dp算法 （动态规划）</h3><p>最重要的是找到<strong>状态转换方程</strong> 一般根据最后一步想前面的步骤 </p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>push()</td>
+<td>入队，在队尾插入一个元素</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>出队，从队首拿出一个元素</td>
+</tr>
+<tr>
+<td>first()</td>
+<td>获取队首元素</td>
+</tr>
+<tr>
+<td>empty()</td>
+<td>判断是否为空 为空返回1</td>
+</tr>
+<tr>
+<td>size()</td>
+<td>计算元素个数</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h4 id="六、-pair模版类型"><a href="#六、-pair模版类型" class="headerlink" title="六、 pair模版类型"></a>六、 pair模版类型</h4><p>个人理解相当于一个结构体吧 有两个变量 ,在bfs中经常用到</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">typedef</span> pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;</span> P
+P <span class="token function">start</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+cout<span class="token operator">&lt;&lt;</span>start<span class="token punctuation">.</span>first<span class="token operator">&lt;&lt;</span><span class="token string">" "</span><span class="token operator">&lt;&lt;</span>start<span class="token punctuation">.</span>second<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span> <span class="token comment">//输出1 2</span>
+start<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+cout<span class="token operator">&lt;&lt;</span>start<span class="token punctuation">.</span>first<span class="token operator">&lt;&lt;</span><span class="token string">" "</span><span class="token operator">&lt;&lt;</span>start<span class="token punctuation">.</span>second<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span> <span class="token comment">//输出3 4</span>
+start<span class="token punctuation">.</span>first<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">;</span>
+start<span class="token punctuation">.</span>second<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">;</span>
+cout<span class="token operator">&lt;&lt;</span>start<span class="token punctuation">.</span>first<span class="token operator">&lt;&lt;</span><span class="token string">" "</span><span class="token operator">&lt;&lt;</span>start<span class="token punctuation">.</span>second<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span> <span class="token comment">//输出5 6</span>
+
+queue<span class="token operator">&lt;</span>P<span class="token operator">&gt;</span> q<span class="token punctuation">;</span>
+q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token number">1</span>，<span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>赋值方式如上 最好用的一点就是pair能不用实例化就调用 {a,b}就是一个pair类型的数据 两个数据 第一个为first，第二个为second</p>
+<p>常常用#define x first 和#define y second 代替</p>
+<h3 id="二、-dp算法-（动态规划）（未完成）"><a href="#二、-dp算法-（动态规划）（未完成）" class="headerlink" title="二、 dp算法 （动态规划）（未完成）"></a>二、 dp算法 （动态规划）（未完成）</h3><p>最重要的是找到<strong>状态转换方程</strong> 一般根据最后一步想前面的步骤 </p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 <span class="token keyword">long</span> <span class="token keyword">long</span> d<span class="token punctuation">[</span><span class="token number">25</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">25</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -648,15 +695,19 @@ dict<span class="token punctuation">.</span><span class="token function">clear</
  	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="三、深度优先搜索（dfs）"><a href="#三、深度优先搜索（dfs）" class="headerlink" title="三、深度优先搜索（dfs）"></a>三、深度优先搜索（dfs）</h3><p>未完待续</p>
-<h3 id="四、广度优先搜索（bfs）"><a href="#四、广度优先搜索（bfs）" class="headerlink" title="四、广度优先搜索（bfs）"></a>四、广度优先搜索（bfs）</h3><h2 id="二-、-一些需要注意的地方"><a href="#二-、-一些需要注意的地方" class="headerlink" title="二 、 一些需要注意的地方"></a>二 、 一些需要注意的地方</h2><ul>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="三、深度优先搜索（dfs）（未完成）"><a href="#三、深度优先搜索（dfs）（未完成）" class="headerlink" title="三、深度优先搜索（dfs）（未完成）"></a>三、深度优先搜索（dfs）（未完成）</h3><p>未完待续 </p>
+<p>dfs可以找到所有方案</p>
+<p>不仅仅是迷宫的搜素 ，其实深搜更常用的是暴力枚举 </p>
+<h3 id="四、广度优先搜索（bfs）（未完成）"><a href="#四、广度优先搜索（bfs）（未完成）" class="headerlink" title="四、广度优先搜索（bfs）（未完成）"></a>四、广度优先搜索（bfs）（未完成）</h3><p>bfs可以找到最小步数 最优解</p>
+<h3 id="五、双指针"><a href="#五、双指针" class="headerlink" title="五、双指针"></a>五、双指针</h3><h3 id="六、贪心"><a href="#六、贪心" class="headerlink" title="六、贪心"></a>六、贪心</h3><p>怎样一个方法 思维得到最优解 一般看出来 可以证明</p>
+<h3 id="七、背包问题"><a href="#七、背包问题" class="headerlink" title="七、背包问题"></a>七、背包问题</h3><h3 id="八、图"><a href="#八、图" class="headerlink" title="八、图"></a>八、图</h3><h2 id="二-、-一些需要注意的地方"><a href="#二-、-一些需要注意的地方" class="headerlink" title="二 、 一些需要注意的地方"></a>二 、 一些需要注意的地方</h2><ul>
 <li>当你需要用2的n次方时，不建议使用pow(2,n)，建议使用(1LL&lt;&lt;n) 表示左移n位，因为前者数字过大之后会不准确</li>
-<li>scanf(“%lf”,)和printf(“%llf”,n) 或者printf(“%I64d”,n) 注意 前面的l是小写的L,l  后面一定要用i的大写I 表示输出的为long long</li>
+<li>scanf(“%lf”,)和printf(“%llf”,n) 或者printf(“%I64d”,n) 注意 前面的l是小写的L,l  后面一定要用i的大写I 表示输出的为long long,不过建议用后者，因为是官网的推荐</li>
 <li>用scanf时一定要注意后面的取地址符 &amp;，使用if时()中一定是==注意细节</li>
 <li>cout&lt;&lt;std::fixed&lt;&lt;a&lt;&lt;endl; 表示输出的a不用科学计数法 这样来输出一些很大或者是double小数位很多</li>
-<li></li>
+<li>必须要吐槽的一点devc++ 数组越界特别是轻微的越界 可能不会影响结果 而且正常编译出正确结果，但蓝桥杯测评中会报错直接0分，真是吐啦。</li>
 </ul>
-<h2 id="三、一些很有用的知识"><a href="#三、一些很有用的知识" class="headerlink" title="三、一些很有用的知识"></a>三、一些很有用的知识</h2><h4 id="一、string与int的相互转换"><a href="#一、string与int的相互转换" class="headerlink" title="一、string与int的相互转换"></a>一、string与int的相互转换</h4><h5 id="1-string转int"><a href="#1-string转int" class="headerlink" title="1.string转int"></a>1.string转int</h5><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> a<span class="token punctuation">;</span>                     
+<h2 id="三、一些很有用的知识-amp-特定技巧-amp-实用模板"><a href="#三、一些很有用的知识-amp-特定技巧-amp-实用模板" class="headerlink" title="三、一些很有用的知识&amp;特定技巧&amp;实用模板"></a>三、一些很有用的知识&amp;特定技巧&amp;实用模板</h2><h4 id="一、string与int的相互转换"><a href="#一、string与int的相互转换" class="headerlink" title="一、string与int的相互转换"></a>一、string与int的相互转换</h4><h5 id="1-string转int"><a href="#1-string转int" class="headerlink" title="1.string转int"></a>1.string转int</h5><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> a<span class="token punctuation">;</span>                     
 string str<span class="token punctuation">;</span>
 a <span class="token operator">=</span> <span class="token function">atoi</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">c_str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
 cout<span class="token operator">&lt;&lt;</span><span class="token keyword">typeid</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span> <span class="token comment">//输出结果为i 表示int</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
@@ -665,18 +716,18 @@ cout<span class="token operator">&lt;&lt;</span><span class="token keyword">type
 <p>利用atoi()函数可直接将字符串类型转换成int类型 ，该函数定义在stdlib.h头文件中，若输入的不是数字字符，那么返回值为0.</p>
 <p>值得注意的是如果为数字加其它的混合则取前面的数字 eg：str=”20LZH45” 最后 a=20</p>
 </blockquote>
-<h5 id="2-int转string"><a href="#2-int转string" class="headerlink" title="2.int转string"></a>2.int转string</h5><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">tostring</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">,</span>string <span class="token operator">&amp;</span>s<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<h5 id="2-int转string"><a href="#2-int转string" class="headerlink" title="2.int转string"></a>2.int转string</h5><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">i2s</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">,</span>string <span class="token operator">&amp;</span>s<span class="token punctuation">)</span><span class="token punctuation">{</span>
 	stringstream ss<span class="token punctuation">;</span>
 	ss<span class="token operator">&lt;&lt;</span>i<span class="token punctuation">;</span>
 	ss<span class="token operator">&gt;&gt;</span>s<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">int</span> a<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
 string _a<span class="token punctuation">;</span>
-<span class="token function">tostring</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>_a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">i2s</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>_a<span class="token punctuation">)</span><span class="token punctuation">;</span>
 cout<span class="token operator">&lt;&lt;</span><span class="token keyword">typeid</span><span class="token punctuation">(</span>_a<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>  <span class="token comment">//输出结果为A3_c 表示一个长度为2的字符串</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
-<p>利用stringstream字符串流去实现转换，它将流与存储在内存中的string对象绑定起来。不仅是int，  double，long long 等都可以根据此函数去改写即可</p>
+<p>利用stringstream字符串流去实现转换，它将流与存储在内存中的string对象绑定起来。不仅是int，  double，long long 等都可以根据此函数去改写即可 ,记住需要加入头文件<sstream></sstream></p>
 </blockquote>
 <h4 id="二、关于sort-函数"><a href="#二、关于sort-函数" class="headerlink" title="二、关于sort()函数"></a>二、关于sort()函数</h4><h5 id="1-从小到大"><a href="#1-从小到大" class="headerlink" title="1.从小到大"></a>1.从小到大</h5><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token function">sort</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>a<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -692,7 +743,7 @@ cout<span class="token operator">&lt;&lt;</span><span class="token keyword">type
 <span class="token punctuation">}</span>
 <span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token function">sort</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>a<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">,</span>complare<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//或者是 sort(&amp;a[0],&amp;a[5])；</span>
+<span class="token comment">//或者是 sort(&amp;a[0],&amp;a[5])；  //greater&lt;int&gt;()</span>
 <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
     cout<span class="token operator">&lt;&lt;</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span><span class="token string">" "</span><span class="token punctuation">;</span>     <span class="token comment">//输出结果为5 4 3 2 1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
@@ -724,11 +775,78 @@ cout<span class="token operator">&lt;&lt;</span>s2<span class="token operator">&
 <blockquote>
 <p>不能反复的截取字符串，特别是在一些时间复杂度很高的循环里面，重新生成字符串在拷贝很费时间，因为要扫描原串</p>
 </blockquote>
+<h4 id="五、关于组合数"><a href="#五、关于组合数" class="headerlink" title="五、关于组合数"></a>五、关于组合数</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> ans<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">do</span><span class="token punctuation">{</span>
+	ans<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">next_permutation</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span><span class="token operator">&amp;</span>a<span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+cout<span class="token operator">&lt;&lt;</span>ans<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>         <span class="token comment">//输出792  为C12 5的组合数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>使用全排列进行组合数的枚举 先声明一个数组Cm n 有m-n个0，n个1 用next_permutation()进行枚举。排列中1的位置代表选的数的位置</p>
+</blockquote>
+<h4 id="六、关于进制转换"><a href="#六、关于进制转换" class="headerlink" title="六、关于进制转换"></a>六、关于进制转换</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">a<span class="token operator">=</span><span class="token number">17</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//十进制输出 17</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%o"</span><span class="token punctuation">,</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//八进制输出 21</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%x"</span><span class="token punctuation">,</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//十六进制输出 11</span>
+<span class="token comment">//而对于其他进制推荐使用itoa()函数</span>
+<span class="token keyword">char</span> s<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">itoa</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>s<span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//3进制输出 122</span>
+<span class="token comment">//或者直接手写其他进制</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>使用printf()进制输入 只能输出八、十、十六进制, itoa转换可以任意 但注意不要超过字符数组界限  值得一提的是 itoa函数并不是标准库当中的，不知道蓝桥杯可不可以，可能会属于c++11的新特性？,以防万一遇到二进制编程大题等建议手写</p>
+</blockquote>
+<h4 id="七、关于时间"><a href="#七、关于时间" class="headerlink" title="七、关于时间"></a>七、关于时间</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">)</span><span class="token function">clock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">1000</span><span class="token operator">&gt;=</span><span class="token number">0.95</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"NO"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//return 0;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>用来显示你最后是否超过时间，虽然根据数据规模复杂度一看就知道 ，emm 还是可以用用，自己直接读取几个大的数据试试时间</p>
+</blockquote>
+<h4 id="八、关于快速幂"><a href="#八、关于快速幂" class="headerlink" title="八、关于快速幂"></a>八、关于快速幂</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token function">pow_a</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span><span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">int</span> x<span class="token operator">=</span>a<span class="token punctuation">;</span>
+	<span class="token keyword">long</span> <span class="token keyword">long</span> res<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>b<span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>b<span class="token operator">&amp;</span><span class="token number">1</span><span class="token punctuation">)</span>
+			res<span class="token operator">*=</span>x<span class="token punctuation">;</span>
+		b<span class="token operator">&gt;&gt;=</span><span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">//右移一位</span>
+		x<span class="token operator">=</span>x<span class="token operator">*</span>x<span class="token punctuation">;</span> 
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+cout<span class="token operator">&lt;&lt;</span><span class="token function">pow_a</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span> <span class="token comment">//输出1024</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>因为pow函数返回的是double 用于整型的运算可能会出问题 ，干脆自己写一个 注意不要超过longlong 否则返回值为0；如果是2的n次方 那么直接用2&lt;&lt;(n-1)就行</p>
+</blockquote>
+<h4 id="九、关于最大公约数-gcd"><a href="#九、关于最大公约数-gcd" class="headerlink" title="九、关于最大公约数 gcd"></a>九、关于最大公约数 gcd</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">gcd</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> a<span class="token punctuation">,</span><span class="token keyword">long</span> <span class="token keyword">long</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>b<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> a<span class="token punctuation">;</span>
+	<span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token function">gcd</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span>a<span class="token operator">%</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
 <h2 id="四、特定思维"><a href="#四、特定思维" class="headerlink" title="四、特定思维"></a>四、特定思维</h2><p>遇到区间和 想前缀和的思想去优化</p>
 <p>遇到最优解 1.暴力枚举 dfs，bfs 2.动态规划 3.背包 4.贪心</p>
+<p>全排列+连通性检测 (走过就记0，走完就+1，看结果是否为1 )此dfs可以检测T字形</p>
 <h2 id="五、一些建议"><a href="#五、一些建议" class="headerlink" title="五、一些建议"></a>五、一些建议</h2><ul>
 <li>做题时一定要仔细，多出几个测评结果，最好能有边界等特殊的例子来测评可以进一步来检验自己的结果</li>
 </ul>
+<p>​<br>​    cout&lt;&lt;count(s2.begin(),s2.end(),’8’)&lt;&lt;endl;;<br>​    cout&lt;&lt;s2.find(‘8’,8); //后面的表示从第多少个位置开始找 缺省表示从头开始</p>
+<ol>
+<li> str.erase (10,8);</li>
+<li>  cout &lt;&lt; str &lt;&lt; endl;</li>
+</ol>
+<p>（1）erase( pos, n); 删除从pos开始的n个字符，例如erase( 0, 1)，删除0位置的一个字符，即删除第一个字符</p>
+<p>int n1=strlen(a[1]);</p>
+<p>char s[100];<br>    sprintf(s,”%x”,n);</p>
+<h4 id="std-ios-sync-with-stdio-false"><a href="#std-ios-sync-with-stdio-false" class="headerlink" title=".std::ios::sync_with_stdio(false);"></a>.std::ios::sync_with_stdio(false);</h4><p>#define endl “\n”</p>
+<p>如果这个返回值不是 00 ，说明程序出了问题。<br>3221225477 (0xC0000005): 访问越界，一般是读或写了野指针指向的内存。<br>3221225725 (0xC00000FD): 堆栈溢出，一般是无穷递归造成的。<br>3221225620 (0xC0000094): 除0错误，一般发生在整型数据除了0的时候。<br>一句话总结：<strong>这些特别大的数，一般说明程序 RERE 了，要好好检查。</strong></p>
+<p>1.lower_bound(起始地址，结束地址，要查找的数值) 返回的是数值 第一个 出现的位置。</p>
+<p>2.upper_bound(起始地址，结束地址，要查找的数值) 返回的是数值 最后一个 出现的位置。</p>
+<p>3.binary_search(起始地址，结束地址，要查找的数值)  返回的是是否存在这么一个数，是一个bool值。</p>
 
                 
             </div>
